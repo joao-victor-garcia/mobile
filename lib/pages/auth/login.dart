@@ -24,7 +24,6 @@ class LoginScreen extends StatelessWidget {
             context: context,
             builder: (BuildContext context) {
               return AlertDialog(
-              
                 title: Text('Authentication error'),
                 content: Text('User not found'),
                 actions: [
@@ -55,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               );
             },
-          );  
+          );
         case "invalid-email":
           return showDialog(
             context: context,
@@ -115,21 +114,24 @@ class LoginScreen extends StatelessWidget {
               height: 150,
             ),
             Container(
-                width: 350,
-                child: TextField(
-                  controller: _emailController,
-                  decoration: InputDecoration(
-                      labelText: 'E-mail',
-                      filled: true,
-                      fillColor: Colors.white.withOpacity(0.75),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Colors.blue))),
-                  cursorColor: Colors.blue,
-                )),
+              width: 350,
+              child: TextField(
+                controller: _emailController,
+                decoration: InputDecoration(
+                  labelText: 'E-mail',
+                  filled: true,
+                  fillColor: Colors.white.withOpacity(0.75),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                ),
+                cursorColor: Colors.blue,
+              ),
+            ),
             SizedBox(
               height: 20,
             ),
@@ -166,7 +168,10 @@ class LoginScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(30))),
                 child: Text(
                   'Login',
-                  style: TextStyle(color: Color.fromARGB(255, 108, 108, 108), fontSize: 20,fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 108, 108, 108),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 )),
             SizedBox(
               height: 60,

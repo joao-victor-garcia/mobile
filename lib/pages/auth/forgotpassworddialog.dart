@@ -16,7 +16,7 @@ class ForgetPasswordDialog extends StatelessWidget {
             return AlertDialog(
               title: Text('Success'),
               content: Text(
-                  'A link to reset your password has been sent to ${_emailController}'),
+                  'A link to reset your password has been sent to ${_emailController.text}'),
               actions: [
                 TextButton(
                   onPressed: Navigator.of(context).pop,
