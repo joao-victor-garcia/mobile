@@ -1,5 +1,6 @@
 import 'package:cleaning_tracker/pages/auth/login.dart';
 import 'package:flutter/material.dart';
+import 'package:cleaning_tracker/pages/profile/profile_screen.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage();
@@ -49,14 +50,66 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ListTile(
-              title: Text("Home"),
+              leading: Icon(
+                Icons.home,
+                color: Color.fromARGB(255, 84, 95, 113),
+              ),
+              title: Text(
+                "Home",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 84, 95, 113),
+                ),
+              ),
             ),
-            ListTile(title: Text("Profile")),
-            ListTile(title: Text("Week view")),
-            ListTile(title: Text("Income info")),
             ListTile(
-    
-              title: Text("Logout"),
+                leading: Icon(
+                  Icons.account_circle_outlined,
+                  color: Color.fromARGB(255, 84, 95, 113),
+                ),
+                title: Text(
+                  "Profile",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 84, 95, 113),
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
+            ListTile(
+                leading: Icon(
+                  Icons.calendar_today_outlined,
+                  color: Color.fromARGB(255, 84, 95, 113),
+                ),
+                title: Text(
+                  "Week view",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 84, 95, 113),
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
+            ListTile(
+                leading: Icon(
+                  Icons.paid_outlined,
+                  color: Color.fromARGB(255, 84, 95, 113),
+                ),
+                title: Text(
+                  "Income info",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 84, 95, 113),
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
+            ListTile(
+              leading: Icon(
+                Icons.logout_outlined,
+                color: Color.fromARGB(255, 210, 110, 110),
+              ),
+              title: Text(
+                "Logout",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 210, 110, 110),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               onTap: () {
                 Navigator.of(context).pop;
                 Navigator.of(context).pushReplacement(

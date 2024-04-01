@@ -96,100 +96,104 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/background_login.png'),
-                fit: BoxFit.cover)),
-        child: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/logo.png',
-              width: 350,
-              height: 350,
-            ),
-            SizedBox(
-              height: 150,
-            ),
-            Container(
-              width: 350,
-              child: TextField(
-                controller: _emailController,
-                decoration: InputDecoration(
-                  labelText: 'E-mail',
-                  filled: true,
-                  fillColor: Colors.white.withOpacity(0.75),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.blue),
-                  ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/background_login.png'),
+                    fit: BoxFit.cover)),
+            child: Center(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/logo.png',
+                  width: 350,
+                  height: 350,
                 ),
-                cursorColor: Colors.blue,
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-                width: 350,
-                child: TextField(
-                  controller: _passwordController,
-                  decoration: InputDecoration(
-                      labelText: 'Password',
+                SizedBox(
+                  height: 150,
+                ),
+                Container(
+                  width: 350,
+                  child: TextField(
+                    controller: _emailController,
+                    decoration: InputDecoration(
+                      labelText: 'E-mail',
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.75),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
                       focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Colors.blue))),
-                  cursorColor: Colors.blue,
-                  obscureText: true,
-                )),
-            SizedBox(
-              height: 20,
-            ),
-            ElevatedButton(
-                onPressed: () => _signInWithEmailAndPassword(context)
-                //lógica para processar o login
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: BorderSide(color: Colors.blue),
+                      ),
+                    ),
+                    cursorColor: Colors.blue,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                    width: 350,
+                    child: TextField(
+                      controller: _passwordController,
+                      decoration: InputDecoration(
+                          labelText: 'Password',
+                          filled: true,
+                          fillColor: Colors.white.withOpacity(0.75),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: BorderSide(color: Colors.blue))),
+                      cursorColor: Colors.blue,
+                      obscureText: true,
+                    )),
+                SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                    onPressed: () => _signInWithEmailAndPassword(context)
+                    //lógica para processar o login
 
-                ,
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 183, 211, 237),
-                    padding:
-                        EdgeInsets.symmetric(vertical: 25, horizontal: 100),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30))),
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 108, 108, 108),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                )),
-            SizedBox(
-              height: 60,
-            ),
-            TextButton(
-              onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return ForgetPasswordDialog();
+                    ,
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 183, 211, 237),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 25, horizontal: 100),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30))),
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 108, 108, 108),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    )),
+                SizedBox(
+                  height: 60,
+                ),
+                TextButton(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return ForgetPasswordDialog();
+                      },
+                    );
                   },
-                );
-              },
-              child: Text('forgot your password?',
-                  style: TextStyle(color: Colors.white, fontSize: 15)),
-            )
-          ],
-        )),
+                  child: Text('forgot your password?',
+                      style: TextStyle(color: Colors.white, fontSize: 15)),
+                )
+              ],
+            )),
+          ),
+        ),
       ),
     );
   }

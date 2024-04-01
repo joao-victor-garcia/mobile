@@ -25,10 +25,15 @@ class MyApp extends StatelessWidget {
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ButtonStyle(
-            foregroundColor: MaterialStateProperty.all<Color>(
-              Color.fromARGB(255, 107, 125, 142),
-            ))),
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color>(
+          Color.fromARGB(255, 107, 125, 142),
+        ),
+      ),
+    ),
+    listTileTheme: ListTileThemeData(
+      selectedColor: Color.fromARGB(255, 183, 211, 237),
+    ),
     fontFamily: 'Quicksand',
   );
   // This widget is the root of your application.
