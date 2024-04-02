@@ -1,8 +1,7 @@
-import 'package:cleaning_tracker/splash.dart';
 import 'package:flutter/material.dart';
-import 'pages/home/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:cleaning_tracker/routes/routes.dart';
 
 void main() async {
   //A linha abaixo permite que a main seja assincrona e que inicie normamente no Android
@@ -41,7 +40,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Cleaning Tracker',
-      home: SplashScreen(),
+      initialRoute: '/splash',
+      routes: Routes.routes,
       builder: (BuildContext context, Widget? child) {
         return Theme(data: dialogTheme, child: child!);
       },

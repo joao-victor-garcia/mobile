@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cleaning_tracker/pages/auth/login.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -75,10 +76,7 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pop;
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => LoginScreen()),
-              );
+              Navigator.pushNamed(context, '/login');
             },
           ),
         ],
