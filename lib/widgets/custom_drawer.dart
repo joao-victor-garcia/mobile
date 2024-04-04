@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cleaning_tracker/pages/auth/login.dart';
+import 'package:cleaning_tracker/routes/routes.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -26,43 +27,58 @@ class CustomDrawer extends StatelessWidget {
                 color: Color.fromARGB(255, 84, 95, 113),
               ),
             ),
+            onTap: () {
+              Navigator.pushNamed(context, '/');
+            },
           ),
           ListTile(
-              leading: Icon(
-                Icons.account_circle_outlined,
+            leading: Icon(
+              Icons.account_circle_outlined,
+              color: Color.fromARGB(255, 84, 95, 113),
+            ),
+            title: Text(
+              "Profile",
+              style: TextStyle(
                 color: Color.fromARGB(255, 84, 95, 113),
+                fontWeight: FontWeight.bold,
               ),
-              title: Text(
-                "Profile",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 84, 95, 113),
-                  fontWeight: FontWeight.bold,
-                ),
-              )),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/profile');
+            },
+          ),
           ListTile(
-              leading: Icon(
-                Icons.calendar_today_outlined,
+            leading: Icon(
+              Icons.calendar_today_outlined,
+              color: Color.fromARGB(255, 84, 95, 113),
+            ),
+            title: Text(
+              "Week view",
+              style: TextStyle(
                 color: Color.fromARGB(255, 84, 95, 113),
+                fontWeight: FontWeight.bold,
               ),
-              title: Text(
-                "Week view",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 84, 95, 113),
-                  fontWeight: FontWeight.bold,
-                ),
-              )),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/weekview');
+            },
+          ),
           ListTile(
-              leading: Icon(
-                Icons.paid_outlined,
+            leading: Icon(
+              Icons.paid_outlined,
+              color: Color.fromARGB(255, 84, 95, 113),
+            ),
+            title: Text(
+              "Income info",
+              style: TextStyle(
                 color: Color.fromARGB(255, 84, 95, 113),
+                fontWeight: FontWeight.bold,
               ),
-              title: Text(
-                "Income info",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 84, 95, 113),
-                  fontWeight: FontWeight.bold,
-                ),
-              )),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/incomeinfo');
+            },
+          ),
           ListTile(
             leading: Icon(
               Icons.logout_outlined,
@@ -76,7 +92,8 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.pushNamed(context, '/login');
+              Navigator.pushNamedAndRemoveUntil(
+                  context, '/login', ((route) => false));
             },
           ),
         ],

@@ -14,6 +14,6 @@ class Routes {
     '/incomeinfo': (context) => IncomeInfoScreen(),
     '/profile': (context) => ProfileScreen(),
     '/weekview': (context) => WeekViewScreen(),
-    '/splash':(context) => SplashScreen(),
+    '/splash': (context) => SplashScreen(),
   };
 }

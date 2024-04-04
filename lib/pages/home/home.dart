@@ -1,6 +1,9 @@
 import 'package:cleaning_tracker/pages/auth/login.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cleaning_tracker/pages/profile/profile_screen.dart';
+import 'package:cleaning_tracker/widgets/custom_drawer.dart';
+import 'package:flutter/widgets.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage();
@@ -29,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
+        elevation: 20,
         backgroundColor: Color(0xFFB7D3ED),
         leading: Builder(builder: (context) {
           return IconButton(
@@ -39,87 +43,51 @@ class _MyHomePageState extends State<MyHomePage> {
           );
         }),
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text(
-                "Menu",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 42),
-              ),
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.home,
-                color: Color.fromARGB(255, 84, 95, 113),
-              ),
-              title: Text(
-                "Home",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 84, 95, 113),
-                ),
-              ),
-            ),
-            ListTile(
-                leading: Icon(
-                  Icons.account_circle_outlined,
-                  color: Color.fromARGB(255, 84, 95, 113),
-                ),
-                title: Text(
-                  "Profile",
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 84, 95, 113),
-                    fontWeight: FontWeight.bold,
-                  ),
-                )),
-            ListTile(
-                leading: Icon(
-                  Icons.calendar_today_outlined,
-                  color: Color.fromARGB(255, 84, 95, 113),
-                ),
-                title: Text(
-                  "Week view",
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 84, 95, 113),
-                    fontWeight: FontWeight.bold,
-                  ),
-                )),
-            ListTile(
-                leading: Icon(
-                  Icons.paid_outlined,
-                  color: Color.fromARGB(255, 84, 95, 113),
-                ),
-                title: Text(
-                  "Income info",
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 84, 95, 113),
-                    fontWeight: FontWeight.bold,
-                  ),
-                )),
-            ListTile(
-              leading: Icon(
-                Icons.logout_outlined,
-                color: Color.fromARGB(255, 210, 110, 110),
-              ),
-              title: Text(
-                "Logout",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 210, 110, 110),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, '/login');
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: CustomDrawer(),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    Text(
+                      "Welcome Kaiju!",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
+                    ),
+                    Container(
+                      width: 300,
+                      child: Text(
+                        "Check your services of the day",
+                        style: TextStyle(fontSize: 20),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [],
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Column(
+                  children: [Text("Pending"), Row()],
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Column(
+                  children: [Text("Completed"), Row()],
+                )
+              ],
+            ),
+          ],
         ),
       ),
     );
