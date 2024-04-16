@@ -52,9 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
+ 
+ 
                   children: [
                     Text(
-                      "Welcome Kaiju!",
+                      "Welcome João!",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
                     ),
@@ -69,23 +71,31 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 Column(
-                  children: [],
+                  children: [
+                    CircularProgressIndicator.adaptive(),
+                  ],
                 )
               ],
             ),
-            Row(
-              children: [
-                Column(
-                  children: [Text("Pending"), Row()],
-                )
-              ],
+            Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: Row(
+                children: [
+                  Column(
+                    children: [Text("Pending",style: TextStyle(fontSize: 28),), Row()],
+                  )
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Column(
-                  children: [Text("Completed"), Row()],
-                )
-              ],
+            Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: Row(
+                children: [
+                  Column(
+                    children: [Text("Completed",style: TextStyle(fontSize: 28),), Row()],
+                  )
+                ],
+              ),
             ),
           ],
         ),
