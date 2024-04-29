@@ -1,6 +1,0 @@
-2024/04/07-18:48:15.530 804 Creating DB C:\Users\joaov\AppData\Local\Temp\flutter_tools.2d0de162\flutter_tools_chrome_device.64ac2a3\Default\IndexedDB\https_best.aliexpress.com_0.indexeddb.leveldb since it was missing.
-2024/04/07-18:48:15.545 804 Reusing MANIFEST C:\Users\joaov\AppData\Local\Temp\flutter_tools.2d0de162\flutter_tools_chrome_device.64ac2a3\Default\IndexedDB\https_best.aliexpress.com_0.indexeddb.leveldb/MANIFEST-000001
-2024/04/07-18:49:03.214 238c Level-0 table #5: started
-2024/04/07-18:49:03.217 238c Level-0 table #5: 844 bytes OK
-2024/04/07-18:49:03.219 238c Delete type=0 #3
-2024/04/07-18:49:03.220 238c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
