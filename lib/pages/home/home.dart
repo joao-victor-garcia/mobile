@@ -1,9 +1,10 @@
-// import 'dart:js_interop';
-import 'package:cleaning_tracker/widgets/custom_progress_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:cleaning_tracker/widgets/custom_progress_indicator.dart';
 import 'package:cleaning_tracker/widgets/custom_drawer.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cleaning_tracker/widgets/custom_service_cards_home.dart';
+import 'package:flutter/widgets.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage();
@@ -22,10 +23,9 @@ class _MyHomePageState extends State<MyHomePage> {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return CircularProgressIndicator();
         } else {
-          //Exibir o widget com base no resultado da operação assíncrona
           String displayName = snapshot.data ?? "Usuário";
           mensagemBoasVindas = "Welcome $displayName!";
-          return _buildContent(); // Chamar método para construir o conteúdo
+          return _buildContent();
         }
       },
     );
@@ -33,33 +33,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<String?> acessarDocumentoPorEmail(String email) async {
     try {
-      // Primeiro você precisa obter a referência para a coleção
       CollectionReference employees =
           FirebaseFirestore.instance.collection('employees');
 
-      // Em seguida, faça uma consulta para encontrar o documento com base no campo de e-mail
       QuerySnapshot querySnapshot =
           await employees.where('email', isEqualTo: email).get();
 
-      // Verifique se há documentos correspondentes
       if (querySnapshot.docs.isNotEmpty) {
-        // Se houver documentos, assumiremos que só há um documento correspondente
         DocumentSnapshot documentSnapshot = querySnapshot.docs.first;
 
-        // Agora podemos acessar os dados do documento
         Map<String, dynamic> data =
             documentSnapshot.data() as Map<String, dynamic>;
 
-        String name = data['name']; // Obtendo o nome do documento
+        String name = data['name'];
 
-        return name; // Retornando o nome encontrado
+        return name;
       } else {
         print("Documento não encontrado para o e-mail fornecido.");
       }
     } catch (e) {
       print("Erro ao acessar o documento por e-mail: $e");
     }
-    return null; // Retornar null caso ocorra algum erro ou se o documento não for encontrado
+    return null;
   }
 
   Future<String?> _getDisplayName() async {
@@ -89,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       drawer: CustomDrawer(),
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -141,35 +137,46 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Padding(
                 padding: const EdgeInsets.all(32.0),
-                child: Row(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Column(
-                      children: [
-                        Text(
-                          "Pending",
-                          style: TextStyle(fontSize: 22),
-                        ),
-                        Row(
-                          children: [],
-                        )
-                      ],
-                    )
+                    Text(
+                      "Pending",
+                      style: TextStyle(fontSize: 22),
+                    ),
+                    SizedBox(height: 20),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: <Widget>[
+                          CustomCardHome(title: 'Deborah', hours: 2, status: 1),
+                          CustomCardHome(title: 'Deborah', hours: 2, status: 1),
+                          CustomCardHome(title: 'Deborah', hours: 2, status: 1),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(32.0),
-                child: Row(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Column(
-                      children: [
-                        Text(
-                          "Completed",
-                          style: TextStyle(fontSize: 22),
-                        ),
-                        Row()
-                      ],
-                    )
+                    Text(
+                      "Completed",
+                      style: TextStyle(fontSize: 22),
+                    ),
+                    SizedBox(height: 20),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: <Widget>[
+                          CustomCardHome(title: 'Elena', hours: 5, status: 1),
+                          CustomCardHome(title: 'Elena', hours: 5, status: 1),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
