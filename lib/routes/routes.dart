@@ -5,6 +5,7 @@ import 'package:cleaning_tracker/pages/home/home.dart';
 import 'package:cleaning_tracker/pages/incomeinfo/incomeinfo.dart';
 import 'package:cleaning_tracker/pages/profile/profile_screen.dart';
 import 'package:cleaning_tracker/pages/weekview/weekview.dart';
+import 'package:cleaning_tracker/pages/services/servicescreen.dart';
 import 'package:cleaning_tracker/main.dart';
 
 class Routes {
@@ -15,5 +16,6 @@ class Routes {
     '/profile': (context) => ProfileScreen(),
     '/weekview': (context) => WeekViewScreen(),
     '/splash': (context) => SplashScreen(),
+    '/service':(context) => ServiceScreen(),
   };
 }

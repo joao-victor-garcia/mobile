@@ -1,4 +1,6 @@
+import 'package:cleaning_tracker/pages/services/servicescreen.dart';
 import 'package:flutter/material.dart';
+import 'package:cleaning_tracker/routes/routes.dart';
 
 class CustomCardHome extends StatelessWidget {
   final String title;
@@ -13,69 +15,80 @@ class CustomCardHome extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      height: 150,
-      margin: EdgeInsets.all(8),
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Color.fromARGB(255, 217, 217, 217),
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: Offset(0, 3),
+    return GestureDetector(
+      onTap: () {
+        //Navegue para a tela de serviço quando o card for tocado
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ServiceScreen(),
           ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
+        );
+      },
+      child: Container(
+        width: 200,
+        height: 150,
+        margin: EdgeInsets.all(8),
+        padding: EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 217, 217, 217),
+          borderRadius: BorderRadius.circular(8),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: Offset(0, 3),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(Icons.schedule_outlined),
-              Text(
-                '$hours hrs',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(
-                Icons.error_outline_outlined,
-                color: Color.fromARGB(255, 244, 67, 54),
-              ),
-              Text(
-                'status',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-          SizedBox()
-        ],
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.schedule_outlined),
+                Text(
+                  '$hours hrs',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(
+                  Icons.error_outline_outlined,
+                  color: Color.fromARGB(255, 244, 67, 54),
+                ),
+                Text(
+                  'status',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            SizedBox()
+          ],
+        ),
       ),
     );
   }

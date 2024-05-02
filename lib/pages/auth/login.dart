@@ -166,20 +166,24 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 20,
                   ),
                   ElevatedButton(
+                    
                     onPressed: () => _signInWithEmailAndPassword(context),
                     style: ElevatedButton.styleFrom(
+                      
+                      surfaceTintColor: Color.fromARGB(255, 53, 62, 69),
                       elevation: 18,
                       backgroundColor: Color.fromARGB(255, 183, 211, 237),
                       padding:
                           EdgeInsets.symmetric(vertical: 25, horizontal: 100),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
+                  
                       ),
                     ),
                     child: Text(
                       'Login',
                       style: TextStyle(
-                        color: Color.fromARGB(255, 108, 108, 108),
+                        color: Color.fromARGB(255, 53, 62, 69),
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
                       ),
