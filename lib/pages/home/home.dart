@@ -135,50 +135,50 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 10,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(32.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(32.0),
+                    child: Text(
                       "Pending",
                       style: TextStyle(fontSize: 22),
                     ),
-                    SizedBox(height: 20),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: <Widget>[
-                          CustomCardHome(title: 'Deborah', hours: 2, status: 1),
-                          CustomCardHome(title: 'Deborah', hours: 2, status: 1),
-                          CustomCardHome(title: 'Deborah', hours: 2, status: 1),
-                        ],
-                      ),
+                  ),
+                  
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: <Widget>[
+                        CustomCardHome(title: 'Deborah', hours: 2, status: 1),
+                        CustomCardHome(title: 'Deborah', hours: 2, status: 1),
+                        CustomCardHome(title: 'Deborah', hours: 2, status: 1),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(32.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(32.0),
+                    child: Text(
                       "Completed",
                       style: TextStyle(fontSize: 22),
                     ),
-                    SizedBox(height: 20),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: <Widget>[
-                          CustomCardHome(title: 'Elena', hours: 5, status: 1),
-                          CustomCardHome(title: 'Elena', hours: 5, status: 1),
-                        ],
-                      ),
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: <Widget>[
+                        CustomCardHome(title: 'Elena', hours: 5, status: 1),
+                        CustomCardHome(title: 'Elena', hours: 5, status: 1),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                  SizedBox(height: 20)
+                ],
               ),
             ],
           ),

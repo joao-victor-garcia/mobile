@@ -49,6 +49,59 @@ void _openAddEntryDialog(BuildContext context) {
       });
 }
 
+void _openAddInvoiceDialog(BuildContext context) {
+  showDialog(
+      context: context,
+      builder: (BuildContext) {
+        return AlertDialog(
+          title: Text(
+            "Invoice",
+            textAlign: TextAlign.center,
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text("Add a picture of the invoice and the value"),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton.icon(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(
+                  Color(0xFFB7D3ED),
+                )),
+                onPressed: () {
+                  //Salvar entrada
+                },
+                icon: Icon(Icons.add_a_photo_outlined),
+                label: Text(
+                  "Add photo",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: '£ Invoice value'),
+              )
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text("Cancel"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text("Save"),
+            ),
+          ],
+        );
+      });
+}
+
 class _ServiceScreenState extends State<ServiceScreen> {
   @override
   Widget build(BuildContext context) {
@@ -161,75 +214,79 @@ class _ServiceScreenState extends State<ServiceScreen> {
     showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {
-          return AlertDialog(
-            backgroundColor: Colors.white,
-            title: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Icon(Icons.hail),
-                SizedBox(height: 10),
-                Text(
-                  'Service details',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            content: Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                    'Add the check-in, check-out and location of the service. If you have a list of products, select the option, add the value and photo of the invoice.'),
-                SizedBox(height: 40),
-                SizedBox(
-                  width: 200,
-                  height: 50,
-                  child: ElevatedButton.icon(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(
-                      Color(0xFFB7D3ED),
-                    )),
-                    onPressed: () {
-                      //Navegue para a tela de adição de entrada quando o botão for pressionado
-                      _openAddEntryDialog(context);
-                    },
-                    icon: Icon(Icons.location_on_outlined),
-                    label: Text(
-                      "Add entry",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
+          return SingleChildScrollView(
+            child: AlertDialog(
+              backgroundColor: Colors.white,
+              title: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Icon(Icons.hail),
+                  SizedBox(height: 10),
+                  Text(
+                    'Service details',
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                ),
-                SizedBox(height: 20),
-                SizedBox(
-                  width: 200,
-                  height: 50,
-                  child: ElevatedButton.icon(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(
-                      Color(0xFFB7D3ED),
-                    )),
-                    onPressed: () {},
-                    icon: Icon(Icons.receipt_long_outlined),
-                    label: Text(
-                      "Add invoice",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                )
-              ],
-            ),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: Text(
-                  'Cancel',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                ],
               ),
-            ],
+              content: Column(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                      'Add the check-in, check-out and location of the service. If you have a list of products, select the option, add the value and photo of the invoice.'),
+                  SizedBox(height: 40),
+                  SizedBox(
+                    width: 200,
+                    height: 50,
+                    child: ElevatedButton.icon(
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                        Color(0xFFB7D3ED),
+                      )),
+                      onPressed: () {
+                        //Navegue para a tela de adição de entrada quando o botão for pressionado
+                        _openAddEntryDialog(context);
+                      },
+                      icon: Icon(Icons.location_on_outlined),
+                      label: Text(
+                        "Add entry",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  SizedBox(
+                    width: 200,
+                    height: 50,
+                    child: ElevatedButton.icon(
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                        Color(0xFFB7D3ED),
+                      )),
+                      onPressed: () {
+                        _openAddInvoiceDialog(context);
+                      },
+                      icon: Icon(Icons.receipt_long_outlined),
+                      label: Text(
+                        "Add invoice",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text(
+                    'Cancel',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
           );
         });
   }
