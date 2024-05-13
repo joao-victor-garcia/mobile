@@ -4,7 +4,7 @@ import 'package:cleaning_tracker/routes/routes.dart';
 
 class CustomCardHome extends StatelessWidget {
   final String title;
-  final double hours;
+  final int hours;
   final int status;
 
   const CustomCardHome(
@@ -15,6 +15,21 @@ class CustomCardHome extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
+    IconData iconData;
+    Color iconColor;
+
+    //Definindo a cor do icone com base no status
+    if (status == 3) {
+      iconData = Icons.check;
+      iconColor = Color.fromARGB(255, 0, 168, 87);
+    } else if (status == 2) {
+      iconData = Icons.sync;
+      iconColor = Colors.blueAccent;
+    } else {
+      iconData = Icons.error_outline_outlined;
+      iconColor = Color.fromARGB(255, 244, 67, 54);
+    }
+
     return GestureDetector(
       onTap: () {
         //Navegue para a tela de serviço quando o card for tocado
@@ -76,10 +91,7 @@ class CustomCardHome extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Icon(
-                  Icons.error_outline_outlined,
-                  color: Color.fromARGB(255, 244, 67, 54),
-                ),
+                Icon(iconData, color: iconColor),
                 Text(
                   'status',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
