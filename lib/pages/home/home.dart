@@ -305,6 +305,10 @@ class _MyHomePageState extends State<MyHomePage> {
   String? userId; // ID do usuário atual
   int pendingCardsCount = 0;
   int completedCardsCount = 0;
+  final startOfDay =
+      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+  final endOfDay = DateTime(DateTime.now().year, DateTime.now().month,
+      DateTime.now().day, 23, 59, 59);
 
   @override
   void initState() {
@@ -317,7 +321,8 @@ class _MyHomePageState extends State<MyHomePage> {
     if (user != null) {
       setState(() {
         userId = user.uid;
-        print("UID do usuário logado: $userId"); // Debug: Imprime o UID do usuário logado
+        print(
+            "UID do usuário logado: $userId"); // Debug: Imprime o UID do usuário logado
       });
     }
   }
@@ -331,7 +336,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<String?> acessarDocumentoPorId(String id) async {
     try {
-      print("Procurando documento com ID: $id"); // Debug: Imprime o ID do documento procurado
+      print(
+          "Procurando documento com ID: $id"); // Debug: Imprime o ID do documento procurado
       QuerySnapshot querySnapshot = await FirebaseFirestore.instance
           .collection("employees")
           .where("id", isEqualTo: id)
@@ -448,6 +454,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ?.uid) // Filtrar serviços do usuário atual
                           .where("status",
                               whereIn: [1, 2]) //Filtrar status 1 e 2
+                          .where("datehour",
+                              isGreaterThanOrEqualTo: startOfDay) //
+                          .where("datehour", isLessThanOrEqualTo: endOfDay)
                           .snapshots(),
                       builder: (context, snapshot) {
                         if (!snapshot.hasData) {
@@ -466,6 +475,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               title: clientName,
                               hours: hours,
                               status: status,
+                              serviceDocument: service,
                             );
                           }).toList(),
                         );
@@ -498,6 +508,9 @@ class _MyHomePageState extends State<MyHomePage> {
                               isEqualTo: FirebaseAuth.instance.currentUser
                                   ?.uid) // Filtrar serviços do usuário atual
                           .where("status", whereIn: [3]) //Filtrar status 3
+                          .where("datehour",
+                              isGreaterThanOrEqualTo: startOfDay) //
+                          .where("datehour", isLessThanOrEqualTo: endOfDay)
                           .snapshots(),
                       builder: (context, snapshot) {
                         if (!snapshot.hasData) {
@@ -516,6 +529,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               title: clientName,
                               hours: hours,
                               status: status,
+                              serviceDocument: service,
                             );
                           }).toList(),
                         );

@@ -16,6 +16,13 @@ class Routes {
     '/profile': (context) => ProfileScreen(),
     '/weekview': (context) => WeekViewScreen(),
     '/splash': (context) => SplashScreen(),
-    '/service':(context) => ServiceScreen(),
+    '/service': (context) {
+      // Extrai o parâmetro serviceDocument da rota
+      final Map<String, dynamic>? args =
+          ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
+
+      // Retorna ServiceScreen com o parâmetro serviceDocument
+      return ServiceScreen(serviceDocument: args!['serviceDocument']);
+    },
   };
 }

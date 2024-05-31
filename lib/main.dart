@@ -5,6 +5,8 @@ import 'package:cleaning_tracker/routes/routes.dart';
 
 void main() async {
   //A linha abaixo permite que a main seja assincrona e que inicie normamente no Android
+  DateTime now = DateTime.now();
+  print("Timestamp atual do dispositivo: ${now.microsecondsSinceEpoch}");
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

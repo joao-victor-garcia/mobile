@@ -1,4 +1,5 @@
 import 'package:cleaning_tracker/pages/services/servicescreen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:cleaning_tracker/routes/routes.dart';
 
@@ -6,13 +7,15 @@ class CustomCardHome extends StatelessWidget {
   final String title;
   final int hours;
   final int status;
+  final DocumentSnapshot serviceDocument;
 
-  const CustomCardHome(
-      {Key? key,
-      required this.title,
-      required this.hours,
-      required this.status})
-      : super(key: key);
+  const CustomCardHome({
+    Key? key,
+    required this.title,
+    required this.hours,
+    required this.status,
+    required this.serviceDocument,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     IconData iconData;
@@ -36,7 +39,8 @@ class CustomCardHome extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ServiceScreen(),
+            builder: (context) =>
+                ServiceScreen(serviceDocument: serviceDocument),
           ),
         );
       },
