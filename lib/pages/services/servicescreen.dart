@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cleaning_tracker/widgets/custom_drawer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class ServiceScreen extends StatelessWidget {
   final DocumentSnapshot serviceDocument;
@@ -13,6 +14,7 @@ class ServiceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     //Extrair o nome do cliente do documento do serviço
     final clientName = serviceDocument["clientName"];
+    final clientAddress = serviceDocument["address"];
 
     return Scaffold(
       floatingActionButton: FloatingActionButton(
@@ -50,10 +52,19 @@ class ServiceScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Client: $clientName", //Exibe o nome do cliente
+                    "Client: ",
                     style: TextStyle(fontSize: 30),
+                  ),
+                  Text(
+                    "$clientName", //Exibe o nome do cliente
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.end,
                   )
                 ],
               ),
@@ -71,18 +82,35 @@ class ServiceScreen extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    "Address",
+                    "Address:",
                     style: TextStyle(fontSize: 30),
                   )
                 ],
               ),
               SizedBox(
-                height: 80,
+                height: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: double
+                      .infinity //Dessa forma o container ocupa toda a largura disponível
+                  ,
+                  child: AutoSizeText(
+                    clientAddress,
+                    style: TextStyle(fontSize: 18),
+                    textAlign: TextAlign.justify,
+                    maxLines: 4,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
               ),
               Row(
                 children: [
                   Text(
-                    "Localization",
+                    "Location",
                     style: TextStyle(fontSize: 30),
                   )
                 ],

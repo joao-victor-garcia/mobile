@@ -304,7 +304,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String mensagemBoasVindas = "Welcome!";
   String? userId; // ID do usuário atual
   int pendingCardsCount = 0;
-  int completedCardsCount = 0;
+  int totalCardsCount = 0;
   final startOfDay =
       DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
   final endOfDay = DateTime(DateTime.now().year, DateTime.now().month,
@@ -323,6 +323,7 @@ class _MyHomePageState extends State<MyHomePage> {
         userId = user.uid;
         print(
             "UID do usuário logado: $userId"); // Debug: Imprime o UID do usuário logado
+        _countServices(); //Contar os serviços após obter o ID do usuário
       });
     }
   }
@@ -356,6 +357,32 @@ class _MyHomePageState extends State<MyHomePage> {
       print("Erro ao acessar o documento por ID: $e");
     }
     return null;
+  }
+
+  Future<void> _countServices() async {
+    if (userId == null) return;
+
+    //Consultar serviços pendentes (status 1 ou 2)
+    QuerySnapshot pendingSnapshot = await FirebaseFirestore.instance
+        .collection("services")
+        .where("idemployee", isEqualTo: userId)
+        .where("status", whereIn: [1, 2])
+        .where("execution_date", isGreaterThanOrEqualTo: startOfDay)
+        .where("execution_date", isLessThanOrEqualTo: endOfDay)
+        .get();
+    //Consultar todos os serviços do dia (status 1, 2 e 3)
+    QuerySnapshot totalSnapshot = await FirebaseFirestore.instance
+        .collection("services")
+        .where("idemployee", isEqualTo: userId)
+        .where("status", whereIn: [1, 2, 3])
+        .where("execution_date", isGreaterThanOrEqualTo: startOfDay)
+        .where("execution_date", isLessThanOrEqualTo: endOfDay)
+        .get();
+
+    setState(() {
+      pendingCardsCount = pendingSnapshot.docs.length;
+      totalCardsCount = totalSnapshot.docs.length;
+    });
   }
 
   Widget _buildContent() {
@@ -415,7 +442,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         children: [
                           CustomProgressIndicator(
-                            progresso: (1 / 3),
+                            progresso: totalCardsCount == 0
+                                ? 0
+                                : (totalCardsCount - pendingCardsCount) /
+                                    totalCardsCount,
                           )
                         ],
                       ),
@@ -454,17 +484,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ?.uid) // Filtrar serviços do usuário atual
                           .where("status",
                               whereIn: [1, 2]) //Filtrar status 1 e 2
-                          .where("datehour",
+                          .where("execution_date",
                               isGreaterThanOrEqualTo: startOfDay) //
-                          .where("datehour", isLessThanOrEqualTo: endOfDay)
+                          .where("execution_date",
+                              isLessThanOrEqualTo: endOfDay)
                           .snapshots(),
                       builder: (context, snapshot) {
                         if (!snapshot.hasData) {
                           return CircularProgressIndicator();
                         }
                         final services = snapshot.data!.docs;
-                        pendingCardsCount =
-                            services.length; // Atualiza pendingCardsCount
                         print(pendingCardsCount);
                         return Row(
                           children: services.map<Widget>((service) {
@@ -508,18 +537,17 @@ class _MyHomePageState extends State<MyHomePage> {
                               isEqualTo: FirebaseAuth.instance.currentUser
                                   ?.uid) // Filtrar serviços do usuário atual
                           .where("status", whereIn: [3]) //Filtrar status 3
-                          .where("datehour",
+                          .where("execution_date",
                               isGreaterThanOrEqualTo: startOfDay) //
-                          .where("datehour", isLessThanOrEqualTo: endOfDay)
+                          .where("execution_date",
+                              isLessThanOrEqualTo: endOfDay)
                           .snapshots(),
                       builder: (context, snapshot) {
                         if (!snapshot.hasData) {
                           return CircularProgressIndicator();
                         }
                         final services = snapshot.data!.docs;
-                        completedCardsCount =
-                            services.length; // Atualiza completedCardsCount
-                        print(completedCardsCount);
+                        print(totalCardsCount);
                         return Row(
                           children: services.map<Widget>((service) {
                             final clientName = service["clientName"];

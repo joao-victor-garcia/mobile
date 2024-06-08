@@ -14,6 +14,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "auto_size_text",
+      "rootUri": "file:///C:/Users/joaov/AppData/Local/Pub/Cache/hosted/pub.dev/auto_size_text-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///C:/Users/joaov/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -356,7 +362,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-05-21T20:38:55.637815Z",
+  "generated": "2024-06-05T13:34:10.565787Z",
   "generator": "pub",
   "generatorVersion": "3.3.2"
 }
