@@ -1,0 +1,28 @@
+2024/06/01-17:47:58.608 4014 Creating DB C:\Users\joaov\AppData\Local\Temp\flutter_tools.8d8193ac\flutter_tools_chrome_device.6577a49d\Default\shared_proto_db since it was missing.
+2024/06/01-17:47:58.618 4014 Reusing MANIFEST C:\Users\joaov\AppData\Local\Temp\flutter_tools.8d8193ac\flutter_tools_chrome_device.6577a49d\Default\shared_proto_db/MANIFEST-000001
+2024/06/01-17:47:58.619 4014 Recovering log #3
+2024/06/01-17:47:58.620 4014 Level-0 table #3: started
+2024/06/01-17:47:58.643 4014 Level-0 table #3: 127252 bytes OK
+2024/06/01-17:47:58.643 4014 Recovering log #4
+2024/06/01-17:47:58.644 4014 Level-0 table #4: started
+2024/06/01-17:47:58.668 4014 Level-0 table #4: 122699 bytes OK
+2024/06/01-17:47:58.668 4014 Recovering log #7
+2024/06/01-17:47:58.669 4014 Level-0 table #5: started
+2024/06/01-17:47:58.683 4014 Level-0 table #5: 121722 bytes OK
+2024/06/01-17:47:58.683 4014 Recovering log #10
+2024/06/01-17:47:58.684 4014 Level-0 table #8: started
+2024/06/01-17:47:58.705 4014 Level-0 table #8: 138951 bytes OK
+2024/06/01-17:47:58.705 4014 Recovering log #11
+2024/06/01-17:47:58.707 4014 Reusing old log C:\Users\joaov\AppData\Local\Temp\flutter_tools.8d8193ac\flutter_tools_chrome_device.6577a49d\Default\shared_proto_db/000011.log 
+2024/06/01-17:47:58.709 4014 Delete type=0 #3
+2024/06/01-17:47:58.709 4014 Delete type=0 #4
+2024/06/01-17:47:58.709 4014 Delete type=0 #7
+2024/06/01-17:47:58.709 4014 Delete type=0 #10
+2024/06/01-17:47:58.711 43e0 Compacting 4@0 + 0@1 files
+2024/06/01-17:47:58.732 43e0 Generated table #12@0: 286 keys, 56523 bytes
+2024/06/01-17:47:58.732 43e0 Compacted 4@0 + 0@1 files => 56523 bytes
+2024/06/01-17:47:58.735 43e0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/06/01-17:47:58.736 43e0 Delete type=2 #3
+2024/06/01-17:47:58.736 43e0 Delete type=2 #4
+2024/06/01-17:47:58.736 43e0 Delete type=2 #5
+2024/06/01-17:47:58.736 43e0 Delete type=2 #8
