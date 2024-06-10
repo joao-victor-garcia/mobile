@@ -1,15 +1,15 @@
-com.example.cleaning_tracker.app-debug-0 C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\res
-com.example.cleaning_tracker.app-main-1 C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\res
-com.example.cleaning_tracker.app-pngs-2 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\app\generated\res\pngs\debug
-com.example.cleaning_tracker.app-resValues-3 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\app\generated\res\resValues\debug
-com.example.cleaning_tracker.app-rs-4 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\app\generated\res\rs\debug
-com.example.cleaning_tracker.app-mergeDebugResources-5 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
-com.example.cleaning_tracker.app-mergeDebugResources-6 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-com.example.cleaning_tracker.app-merged_res-7 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\app\intermediates\merged_res\debug
-com.example.cleaning_tracker.app-packaged_res-8 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\packaged_res\debug
-com.example.cleaning_tracker.app-packaged_res-9 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\packaged_res\debug
-com.example.cleaning_tracker.app-packaged_res-10 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\packaged_res\debug
-com.example.cleaning_tracker.app-packaged_res-11 C:\Projetos\Cleaning Tracker\cleaning_tracker\build\shared_preferences_android\intermediates\packaged_res\debug
+com.example.cleaning_tracker.app-debug-0 C:\Projetos\mobile\android\app\src\debug\res
+com.example.cleaning_tracker.app-main-1 C:\Projetos\mobile\android\app\src\main\res
+com.example.cleaning_tracker.app-pngs-2 C:\Projetos\mobile\build\app\generated\res\pngs\debug
+com.example.cleaning_tracker.app-resValues-3 C:\Projetos\mobile\build\app\generated\res\resValues\debug
+com.example.cleaning_tracker.app-rs-4 C:\Projetos\mobile\build\app\generated\res\rs\debug
+com.example.cleaning_tracker.app-mergeDebugResources-5 C:\Projetos\mobile\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.cleaning_tracker.app-mergeDebugResources-6 C:\Projetos\mobile\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.cleaning_tracker.app-merged_res-7 C:\Projetos\mobile\build\app\intermediates\merged_res\debug
+com.example.cleaning_tracker.app-packaged_res-8 C:\Projetos\mobile\build\cloud_firestore\intermediates\packaged_res\debug
+com.example.cleaning_tracker.app-packaged_res-9 C:\Projetos\mobile\build\firebase_auth\intermediates\packaged_res\debug
+com.example.cleaning_tracker.app-packaged_res-10 C:\Projetos\mobile\build\firebase_core\intermediates\packaged_res\debug
+com.example.cleaning_tracker.app-packaged_res-11 C:\Projetos\mobile\build\shared_preferences_android\intermediates\packaged_res\debug
 com.example.cleaning_tracker.app-jetified-window-1.0.0-beta04-12 C:\Users\joaov\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\res
 com.example.cleaning_tracker.app-jetified-window-java-1.0.0-beta04-13 C:\Users\joaov\.gradle\caches\transforms-3\142c24f2530665bb6deb4123ab140714\transformed\jetified-window-java-1.0.0-beta04\res
 com.example.cleaning_tracker.app-core-1.6.0-14 C:\Users\joaov\.gradle\caches\transforms-3\2579a7de00054bf46a8dbc332552f622\transformed\core-1.6.0\res
