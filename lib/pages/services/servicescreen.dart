@@ -4,6 +4,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'dart:io';
 
 class ServiceScreen extends StatelessWidget {
   final DocumentSnapshot serviceDocument;
@@ -17,6 +20,12 @@ class ServiceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final clientName = serviceDocument["clientName"];
     final clientAddress = serviceDocument["address"];
+    final int status = serviceDocument["status"];
+    final checkin = serviceDocument["checkin"];
+    final checkout = serviceDocument["checkout"];
+
+    Timestamp? startTime = checkin != null ? checkin["start_time"] : null;
+    Timestamp? endTime = checkout != null ? checkout["end_time"] : null;
 
     return Scaffold(
       floatingActionButton: FloatingActionButton(
@@ -26,8 +35,7 @@ class ServiceScreen extends StatelessWidget {
         foregroundColor: Color.fromARGB(255, 53, 62, 69),
         backgroundColor: Color(0xFFB7D3ED),
         onPressed: () {
-          _openServiceEntryDialog(
-              context, serviceDocument.id); // Passar o ID do documento
+          _openServiceEntryDialog(context, serviceDocument.id);
         },
         child: Icon(Icons.add),
       ),
@@ -139,7 +147,25 @@ class ServiceScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 30),
                   )
                 ],
-              )
+              ),
+              if (status == 2 || status == 3) ...[
+                if (startTime != null) ...[
+                  SizedBox(height: 10),
+                  Text(
+                    "Check-in time: ${DateTime.fromMillisecondsSinceEpoch(startTime.seconds * 1000)}",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
+              ],
+              if (status == 3) ...[
+                if (endTime != null) ...[
+                  SizedBox(height: 10),
+                  Text(
+                    "Check-out time: ${DateTime.fromMillisecondsSinceEpoch(endTime.seconds * 1000)}",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
+              ],
             ],
           ),
         ),
@@ -149,12 +175,21 @@ class ServiceScreen extends StatelessWidget {
 }
 
 void _openAddEntryDialog(BuildContext context, String serviceId) async {
+  // Obter o status do serviço antes de abrir o diálogo
+  DocumentSnapshot serviceDoc = await FirebaseFirestore.instance
+      .collection("services")
+      .doc(serviceId)
+      .get();
+  int currentStatus = serviceDoc["status"];
+
+  String dialogTitle = (currentStatus == 1) ? "Check in" : "Check out";
+
   showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text(
-          "Check in",
+          dialogTitle,
           textAlign: TextAlign.center,
         ),
         content: Column(
@@ -200,21 +235,44 @@ Future<void> _saveEntry(BuildContext context, String serviceId) async {
       );
       Timestamp timestamp = Timestamp.now();
 
-      await FirebaseFirestore.instance
+      DocumentSnapshot serviceDoc = await FirebaseFirestore.instance
           .collection("services")
           .doc(serviceId)
-          .update({
-        "checkin": {
-          "start_time": timestamp,
-          "checkin_geoloc": GeoPoint(position.latitude, position.longitude),
-        },
-        "status": 2,
-      });
+          .get();
+      int currentStatus = serviceDoc["status"];
 
+      if (currentStatus == 1) {
+        await FirebaseFirestore.instance
+            .collection("services")
+            .doc(serviceId)
+            .update({
+          "checkin": {
+            "start_time": timestamp,
+            "checkin_geoloc": GeoPoint(position.latitude, position.longitude),
+          },
+          "status": 2,
+        });
+
+        Navigator.of(context).pop();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Check-in recorded successfully")),
+        );
+      } else if (currentStatus == 2) {
+        await FirebaseFirestore.instance
+            .collection("services")
+            .doc(serviceId)
+            .update({
+          "checkout": {
+            "end_time": timestamp,
+            "checkout_geoloc": GeoPoint(position.latitude, position.longitude),
+          },
+          "status": 3,
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Check-out recorded successfully")),
+        );
+      }
       Navigator.of(context).pop();
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Check-in recorded successfully")),
-      );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Location permission denied")),
@@ -228,7 +286,8 @@ Future<void> _saveEntry(BuildContext context, String serviceId) async {
   }
 }
 
-void _openAddInvoiceDialog(BuildContext context) {
+
+void _openAddInvoiceDialog(BuildContext context, String serviceId) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -241,17 +300,13 @@ void _openAddInvoiceDialog(BuildContext context) {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text("Add a picture of the invoice and the value"),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             ElevatedButton.icon(
               style: ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(
-                  Color(0xFFB7D3ED),
-                ),
+                backgroundColor: MaterialStatePropertyAll(Color(0xFFB7D3ED)),
               ),
               onPressed: () {
-                // Save invoice entry
+                _pickImage(context, serviceId);
               },
               icon: Icon(Icons.add_a_photo_outlined),
               label: Text(
@@ -261,7 +316,7 @@ void _openAddInvoiceDialog(BuildContext context) {
             ),
             TextField(
               decoration: InputDecoration(labelText: '£ Invoice value'),
-            )
+            ),
           ],
         ),
         actions: [
@@ -282,6 +337,75 @@ void _openAddInvoiceDialog(BuildContext context) {
     },
   );
 }
+
+
+Future<void> _pickImage(BuildContext context, String serviceId) async {
+  final ImagePicker _picker = ImagePicker();
+  XFile? image;
+
+  await showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text("Select Image"),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ElevatedButton.icon(
+              onPressed: () async {
+                Navigator.of(context).pop();
+                image = await _picker.pickImage(source: ImageSource.camera);
+                if (image != null) {
+                  await _uploadImageToFirebase(context, image!, serviceId);
+                }
+              },
+              icon: Icon(Icons.camera),
+              label: Text("Camera"),
+            ),
+            ElevatedButton.icon(
+              onPressed: () async {
+                Navigator.of(context).pop();
+                image = await _picker.pickImage(source: ImageSource.gallery);
+                if (image != null) {
+                  await _uploadImageToFirebase(context, image!, serviceId);
+                }
+              },
+              icon: Icon(Icons.photo_library),
+              label: Text("Gallery"),
+            ),
+          ],
+        ),
+      );
+    },
+  );
+}
+Future<void> _uploadImageToFirebase(BuildContext context, XFile image, String serviceId) async {
+  try {
+    // Referência ao Firebase Storage
+    final storageRef = FirebaseStorage.instance.ref().child('service_images/$serviceId/${DateTime.now().millisecondsSinceEpoch}.jpg');
+
+    // Faz o upload do arquivo para o Firebase Storage
+    final uploadTask = storageRef.putFile(File(image.path));
+    final snapshot = await uploadTask.whenComplete(() => null);
+
+    // Obtém a URL da imagem carregada
+    final downloadUrl = await snapshot.ref.getDownloadURL();
+
+    // Salva a URL no Firestore
+    await _saveImageUrlToFirestore(serviceId, downloadUrl);
+
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Image uploaded successfully")));
+  } catch (e) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Failed to upload image: $e")));
+  }
+}
+
+Future<void> _saveImageUrlToFirestore(String serviceId, String imageUrl) async {
+  await FirebaseFirestore.instance.collection('services').doc(serviceId).update({
+    'imageUrl': imageUrl,
+  });
+}
+
 
 void _openServiceEntryDialog(BuildContext context, String serviceId) {
   showModalBottomSheet(
@@ -338,7 +462,7 @@ void _openServiceEntryDialog(BuildContext context, String serviceId) {
                     ),
                   ),
                   onPressed: () {
-                    _openAddInvoiceDialog(context);
+                    _openAddInvoiceDialog(context, serviceId);
                   },
                   icon: Icon(Icons.receipt_long_outlined),
                   label: Text(
@@ -346,7 +470,7 @@ void _openServiceEntryDialog(BuildContext context, String serviceId) {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-              )
+              ),
             ],
           ),
           actions: [
@@ -365,3 +489,4 @@ void _openServiceEntryDialog(BuildContext context, String serviceId) {
     },
   );
 }
+
