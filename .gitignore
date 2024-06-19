@@ -1,0 +1,83 @@
+# These are some examples of commonly ignored file patterns.
+# You should customize this list as applicable to your project.
+# Learn more about .gitignore:
+#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+# Dart
+*.dart_tool/
+*.pub/
+.packages
+.pub-cache/
+.pub/
+*.dart_tool/
+.dart_server/
+.buildlog
+.dart_tool/
+.dart_tool/
+
+# Flutter specific
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins
+.flutter-plugins-dependencies
+flutter_export_environment.sh
+*.flutter-plugins-dependencies
+*.flutter-plugins
+.flutter-plugins-dependencies
+*.flutter-plugins-dependencies
+
+# Android specific
+**/android/**/gradle-wrapper.jar
+**/android/**/gradle-wrapper.properties
+**/android/**/gradle-wrapper/
+**/android/**/.gradle/
+**/android/**/local.properties
+**/android/**/app/build/
+**/android/**/captures/
+**/android/**/crashlytics-build.properties
+**/android/**/fabric.properties
+
+# iOS specific
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/.last_build_id
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/engine
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/Generated.xcconfig
+ios/ServiceDefinitions.json
+ios/Runner.xcworkspace/
+ios/Runner.build/
+ios/Runner.xcodeproj/project.xcworkspace/
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Flutter/Flutter.podspec
+
+# Web specific
+web/manifest.json
+web/.dart_tool/
+web/.firebase/
+web/.firebase/*.dart
+web/.firebase/*.yaml
+web/ios/.firebase/
+web/ios/.firebase/*.dart
+web/ios/.firebase/*.yaml
+web/android/.firebase/
+web/android/.firebase/*.dart
+web/android/.firebase/*.yaml
+
+# Miscellaneous
+*.iml
+*.hprof
+*.idea/
+*.log
+*.lock
+*.metadata
+*.DS_Store
+*.pyc
+*.pyo
+*.swp
+*.lock
+*.tmp
+*~.nib
+*~.xcuserstate
