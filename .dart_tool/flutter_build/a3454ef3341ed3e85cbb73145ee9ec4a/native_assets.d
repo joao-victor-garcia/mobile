@@ -1,1 +1,0 @@
- C:\\Projetos\\Cleaning\ Tracker\\cleaning_tracker\\.dart_tool\\flutter_build\\a3454ef3341ed3e85cbb73145ee9ec4a\\native_assets.yaml: 
