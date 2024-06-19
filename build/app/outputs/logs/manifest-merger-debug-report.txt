@@ -1,18 +1,18 @@
 -- Merging decision tree log ---
 application
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:4:5-34:19
-MERGED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:19
-MERGED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:19
-MERGED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-34:19
-MERGED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-34:19
+INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:4:5-34:19
+MERGED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:19
+MERGED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:19
+MERGED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-34:19
+MERGED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-34:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\joaov\.gradle\caches\transforms-3\640a95b4824fe429c2e602fb56dda0c8\transformed\jetified-firebase-firestore-24.10.3\AndroidManifest.xml:13:5-24:19
@@ -54,22 +54,22 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\jo
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.10.1] C:\Users\joaov\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
 	android:name
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:1:1-46:12
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:1:1-46:12
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:1:1-46:12
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:1:1-46:12
-MERGED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:1:1-46:12
-MERGED from [:shared_preferences_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:permission_handler_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-19:12
-MERGED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-36:12
-MERGED from [:flutter_plugin_android_lifecycle] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:1:1-46:12
+INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:1:1-46:12
+INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:1:1-46:12
+INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:1:1-46:12
+MERGED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:1:1-46:12
+MERGED from [:shared_preferences_android] C:\Projetos\mobile\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:permission_handler_android] C:\Projetos\mobile\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-19:12
+MERGED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-36:12
+MERGED from [:flutter_plugin_android_lifecycle] C:\Projetos\mobile\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\joaov\.gradle\caches\transforms-3\640a95b4824fe429c2e602fb56dda0c8\transformed\jetified-firebase-firestore-24.10.3\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\joaov\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:15:1-39:12
@@ -116,65 +116,65 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\joaov\.gradle\cache
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\joaov\.gradle\caches\transforms-3\ae329bc8a0eb87982c4fe41e3ec5da7f\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\joaov\.gradle\caches\transforms-3\65ffbf7ff5a5fa53bf2b305a168dede4\transformed\jetified-grpc-android-1.57.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\joaov\.gradle\caches\transforms-3\9f69f0524f044217ee057b21fea5dcb5\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 	package
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:1:1-46:12
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:1:1-46:12
+		INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:1:1-46:12
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:1:1-46:12
+		INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:1:1-46:12
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:1:1-46:12
+		INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:2:5-79
+ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:2:5-79
 	android:name
-		ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:2:22-76
+		ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:2:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:3:5-81
+ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:3:5-81
 	android:name
-		ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:3:22-78
+		ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:3:22-78
 queries
-ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:40:5-45:15
+ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:40:5-45:15
 intent#action:name:android.intent.action.PROCESS_TEXT+data:mimeType:text/plain
-ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:41:9-44:18
+ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:41:9-44:18
 action#android.intent.action.PROCESS_TEXT
-ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:42:13-72
+ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:42:13-72
 	android:name
-		ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:42:21-70
+		ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:42:21-70
 data
-ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:43:13-50
+ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:43:13-50
 	android:mimeType
-		ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml:43:19-48
+		ADDED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml:43:19-48
 uses-sdk
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml
-MERGED from [:shared_preferences_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:shared_preferences_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:permission_handler_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:permission_handler_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
-MERGED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
-MERGED from [:flutter_plugin_android_lifecycle] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:flutter_plugin_android_lifecycle] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml
+MERGED from [:shared_preferences_android] C:\Projetos\mobile\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] C:\Projetos\mobile\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] C:\Projetos\mobile\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] C:\Projetos\mobile\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\Projetos\mobile\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\Projetos\mobile\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\joaov\.gradle\caches\transforms-3\640a95b4824fe429c2e602fb56dda0c8\transformed\jetified-firebase-firestore-24.10.3\AndroidManifest.xml:6:5-44
@@ -267,18 +267,18 @@ MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\joaov\.gradle\caches\transfor
 MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\joaov\.gradle\caches\transforms-3\65ffbf7ff5a5fa53bf2b305a168dede4\transformed\jetified-grpc-android-1.57.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\joaov\.gradle\caches\transforms-3\9f69f0524f044217ee057b21fea5dcb5\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\joaov\.gradle\caches\transforms-3\9f69f0524f044217ee057b21fea5dcb5\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml
-INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:23:9-61
 	android:targetSdkVersion
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Projetos\mobile\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml:6:5-66
+ADDED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml:6:5-66
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\joaov\.gradle\caches\transforms-3\640a95b4824fe429c2e602fb56dda0c8\transformed\jetified-firebase-firestore-24.10.3\AndroidManifest.xml:11:5-67
@@ -288,15 +288,15 @@ MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\joaov\.gradle
 MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\joaov\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\joaov\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from C:\Projetos\Cleaning Tracker\cleaning_tracker\android\app\src\debug\AndroidManifest.xml:6:22-64
+		ADDED from C:\Projetos\mobile\android\app\src\debug\AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+ADDED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\joaov\.gradle\caches\transforms-3\640a95b4824fe429c2e602fb56dda0c8\transformed\jetified-firebase-firestore-24.10.3\AndroidManifest.xml:14:9-23:19
@@ -316,83 +316,83 @@ MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\joaov\.gradle\
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\joaov\.gradle\caches\transforms-3\89c6fd71728d0adae7dd67686aa1cdf7\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:32:13-43
 	android:name
-		ADDED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+		ADDED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_auth] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_auth] C:\Projetos\mobile\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_storage] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
+		ADDED from [:firebase_storage] C:\Projetos\mobile\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:cloud_firestore] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+		ADDED from [:cloud_firestore] C:\Projetos\mobile\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_core] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_core] C:\Projetos\mobile\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-77
+ADDED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-77
 	android:name
-		ADDED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-74
+		ADDED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-74
 service#com.baseflow.geolocator.GeolocatorLocationService
-ADDED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:56
+ADDED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:56
 	android:enabled
-		ADDED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-35
+		ADDED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-35
 	android:exported
-		ADDED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-37
+		ADDED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-37
 	android:foregroundServiceType
-		ADDED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-53
+		ADDED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-53
 	android:name
-		ADDED from [:geolocator_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-77
+		ADDED from [:geolocator_android] C:\Projetos\mobile\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-77
 provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
-ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-19:20
+ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-19:20
 	android:grantUriPermissions
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-47
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-47
 	android:authorities
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-74
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-74
 	android:exported
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-37
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-37
 	android:name
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-82
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-82
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-18:75
+ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-18:75
 	android:resource
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:18:17-72
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:18:17-72
 	android:name
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-67
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-67
 service#com.google.android.gms.metadata.ModuleDependencies
-ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-33:19
+ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-33:19
 	android:enabled
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-36
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-36
 	android:exported
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
 	tools:ignore
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-40
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-40
 	android:name
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-78
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-78
 intent-filter#action:name:com.google.android.gms.metadata.MODULE_DEPENDENCIES
-ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-28:29
+ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-28:29
 action#com.google.android.gms.metadata.MODULE_DEPENDENCIES
-ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-94
+ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-94
 	android:name
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-91
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-91
 meta-data#photopicker_activity:0:required
-ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:36
+ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:36
 	android:value
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:32:17-33
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:32:17-33
 	android:name
-		ADDED from [:image_picker_android] C:\Projetos\Cleaning Tracker\cleaning_tracker\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-63
+		ADDED from [:image_picker_android] C:\Projetos\mobile\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-63
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\joaov\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\joaov\.gradle\caches\transforms-3\640a95b4824fe429c2e602fb56dda0c8\transformed\jetified-firebase-firestore-24.10.3\AndroidManifest.xml:10:5-79

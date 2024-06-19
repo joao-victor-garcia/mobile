@@ -6,6 +6,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:intl/intl.dart'; // Adicionado para formatação de data/hora
 import 'dart:io';
 
 class ServiceScreen extends StatelessWidget {
@@ -27,6 +28,11 @@ class ServiceScreen extends StatelessWidget {
     Timestamp? startTime = checkin != null ? checkin["start_time"] : null;
     Timestamp? endTime = checkout != null ? checkout["end_time"] : null;
 
+    String formatTime(Timestamp? timestamp) {
+      if (timestamp == null) return "";
+      return DateFormat.jm().format(timestamp.toDate());
+    }
+
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
@@ -40,22 +46,14 @@ class ServiceScreen extends StatelessWidget {
         child: Icon(Icons.add),
       ),
       appBar: AppBar(
-        title: Text('Service'),
-        backgroundColor: Color(0xFFB7D3ED),
-        leading: Builder(builder: (context) {
-          return Row(
-            children: [
-              IconButton(
-                icon: Icon(Icons.menu),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-              ),
-            ],
-          );
-        }),
-      ),
-      drawer: CustomDrawer(),
+          title: Text('Service'),
+          backgroundColor: Color(0xFFB7D3ED),
+          leading: BackButton(
+            color: Colors.black,
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/');
+            },
+          )),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(32.0),
@@ -138,34 +136,47 @@ class ServiceScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Check in",
-                    style: TextStyle(fontSize: 30),
+                  Column(
+                    children: [
+                      Text(
+                        "Check in",
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      SizedBox(height: 10),
+                      if (status == 2 || status == 3) ...[
+                        if (startTime != null) ...[
+                          Chip(
+                            label: Text(
+                              formatTime(startTime),
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
+                        ],
+                      ],
+                    ],
                   ),
-                  Text(
-                    "Check out",
-                    style: TextStyle(fontSize: 30),
-                  )
+                  Column(
+                    children: [
+                      Text(
+                        "Check out",
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      SizedBox(height: 10),
+                      if (status == 3) ...[
+                        if (endTime != null) ...[
+                          Chip(
+                            label: Text(
+                              formatTime(endTime),
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
+                        ],
+                      ],
+                    ],
+                  ),
                 ],
               ),
-              if (status == 2 || status == 3) ...[
-                if (startTime != null) ...[
-                  SizedBox(height: 10),
-                  Text(
-                    "Check-in time: ${DateTime.fromMillisecondsSinceEpoch(startTime.seconds * 1000)}",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              ],
-              if (status == 3) ...[
-                if (endTime != null) ...[
-                  SizedBox(height: 10),
-                  Text(
-                    "Check-out time: ${DateTime.fromMillisecondsSinceEpoch(endTime.seconds * 1000)}",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              ],
+              SizedBox(height: 10),
             ],
           ),
         ),
@@ -253,7 +264,6 @@ Future<void> _saveEntry(BuildContext context, String serviceId) async {
           "status": 2,
         });
 
-        Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text("Check-in recorded successfully")),
         );
@@ -272,7 +282,20 @@ Future<void> _saveEntry(BuildContext context, String serviceId) async {
           SnackBar(content: Text("Check-out recorded successfully")),
         );
       }
-      Navigator.of(context).pop();
+
+      // Obter documento atualizado
+      DocumentSnapshot updatedServiceDoc = await FirebaseFirestore.instance
+          .collection("services")
+          .doc(serviceId)
+          .get();
+
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              ServiceScreen(serviceDocument: updatedServiceDoc),
+        ),
+      );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Location permission denied")),
@@ -285,7 +308,6 @@ Future<void> _saveEntry(BuildContext context, String serviceId) async {
     );
   }
 }
-
 
 void _openAddInvoiceDialog(BuildContext context, String serviceId) {
   showDialog(
@@ -338,7 +360,6 @@ void _openAddInvoiceDialog(BuildContext context, String serviceId) {
   );
 }
 
-
 Future<void> _pickImage(BuildContext context, String serviceId) async {
   final ImagePicker _picker = ImagePicker();
   XFile? image;
@@ -379,10 +400,13 @@ Future<void> _pickImage(BuildContext context, String serviceId) async {
     },
   );
 }
-Future<void> _uploadImageToFirebase(BuildContext context, XFile image, String serviceId) async {
+
+Future<void> _uploadImageToFirebase(
+    BuildContext context, XFile image, String serviceId) async {
   try {
     // Referência ao Firebase Storage
-    final storageRef = FirebaseStorage.instance.ref().child('service_images/$serviceId/${DateTime.now().millisecondsSinceEpoch}.jpg');
+    final storageRef = FirebaseStorage.instance.ref().child(
+        'service_images/$serviceId/${DateTime.now().millisecondsSinceEpoch}.jpg');
 
     // Faz o upload do arquivo para o Firebase Storage
     final uploadTask = storageRef.putFile(File(image.path));
@@ -394,18 +418,30 @@ Future<void> _uploadImageToFirebase(BuildContext context, XFile image, String se
     // Salva a URL no Firestore
     await _saveImageUrlToFirestore(serviceId, downloadUrl);
 
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Image uploaded successfully")));
+    // Mostrar mensagem de sucesso
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Image uploaded successfully")),
+      );
+    }
   } catch (e) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Failed to upload image: $e")));
+    // Mostrar mensagem de erro
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Failed to upload image: $e")),
+      );
+    }
   }
 }
 
 Future<void> _saveImageUrlToFirestore(String serviceId, String imageUrl) async {
-  await FirebaseFirestore.instance.collection('services').doc(serviceId).update({
-    'imageUrl': imageUrl,
+  await FirebaseFirestore.instance
+      .collection('services')
+      .doc(serviceId)
+      .update({
+    'invoice_data.image_location': imageUrl,
   });
 }
-
 
 void _openServiceEntryDialog(BuildContext context, String serviceId) {
   showModalBottomSheet(
@@ -489,4 +525,3 @@ void _openServiceEntryDialog(BuildContext context, String serviceId) {
     },
   );
 }
-
