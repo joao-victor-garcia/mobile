@@ -48,3 +48,10 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Arquivos e diretórios de build
+build/
+.dart_tool/
+
+# Arquivos grandes do Flutter
+*.dill
+*.track.dill
